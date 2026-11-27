@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Jackpot Slots</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>JACKPOT SLOTS</h1>
+        <p class="subtitle">Phaser 3 · TypeScript · pure math engine · virtual credits only</p>
+      </header>
+
+      <div id="game"></div>
+
+      <section class="hud" aria-label="Game status">
+        <div class="stat"><small>CREDITS</small><b id="credits">0</b></div>
+        <div class="stat"><small>BET</small><b id="bet">0</b></div>
+        <div class="stat"><small>WIN</small><b id="win">0</b></div>
+      </section>
+
+      <div class="controls">
+        <button id="bet-down" aria-label="Decrease bet">−</button>
+        <button id="spin" class="primary">SPIN</button>
+        <button id="bet-up" aria-label="Increase bet">+</button>
+        <button id="mute" aria-label="Toggle sound">🔊</button>
+      </div>
+      <p class="hint">Click the lever, press SPIN, or hit Space.</p>
+
+      <details>
+        <summary>Under the hood: math &amp; engine</summary>
+        <div id="math-panel"></div>
+      </details>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
