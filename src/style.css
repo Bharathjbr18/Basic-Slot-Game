@@ -1,0 +1,31 @@
+:root {
+  --bg: #0d0a24; --panel: #1c1545; --line: #322a75; --text: #e8e6ff; --muted: #9a95c9;
+  --accent: #f08a2c; --on-accent: #1a1038;
+  color-scheme: dark;
+  padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+}
+@media (prefers-color-scheme: light) {
+  :root { --bg: #e9e7fa; --panel: #fff; --line: #c9c4ee; --text: #1a1038; --muted: #5b5690; color-scheme: light; }
+}
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, 'Segoe UI', sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 10px 12px 28px; }
+h1 { font-size: 20px; margin: 6px 0 0; text-align: center; letter-spacing: 0.04em; }
+.subtitle, .hint { margin: 2px 0 8px; text-align: center; color: var(--muted); font-size: 13px; }
+#game { width: 100%; aspect-ratio: 816 / 624; }
+.hud { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; text-align: center; }
+.stat small { display: block; color: var(--muted); font-size: 11px; letter-spacing: 0.08em; }
+.stat b { font-size: 20px; font-variant-numeric: tabular-nums; }
+.controls { display: flex; gap: 8px; }
+button { font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: default; }
+button.primary { flex: 1; background: var(--accent); color: var(--on-accent); font-weight: 800; font-size: 18px; letter-spacing: 0.1em; border: 0; }
+details { margin-top: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+summary { cursor: pointer; font-weight: 700; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; margin: 8px 0; width: 100%; }
+td, th { border-bottom: 1px solid var(--line); padding: 4px 8px; text-align: left; }
+code { font: 12px ui-monospace, Menlo, monospace; word-break: break-all; }
+.muted { color: var(--muted); font-size: 13px; }
+.debug { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.debug[hidden] { display: none; }
